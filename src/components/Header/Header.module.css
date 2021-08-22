@@ -8,5 +8,21 @@
 
 .headerContainer h1 {
     font-size: 3.2rem;
-    margin: auto 0;
+    align-self: center;
+    margin-left: 10px;
 }
+.formSearch{ 
+    display: flex;
+    flex-grow: 1;
+    justify-content: flex-end;
+    
+}
+.searchBook, .searchSubmit{
+    margin-right: 20px;
+    height: 50%;
+    align-self: center;
+}
+.searchBook{
+    width: 25%;
+}
+

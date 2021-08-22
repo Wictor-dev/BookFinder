@@ -1,7 +1,6 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import Search  from '../components/Search'
-import Header from '../components/Header'
 import styles from '../../styles/Home.module.css'
 const Home = (props) => {
   // console.log()
@@ -10,7 +9,7 @@ const Home = (props) => {
       <Head>
         <title>Home</title>
       </Head>
-      <Header />
+      
       <div className={styles.container}>
         <Search books={props.results.results} />
 
