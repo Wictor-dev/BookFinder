@@ -22,8 +22,8 @@ const Home = (props) => {
 export default Home
 
 export const getStaticProps = async () => {
-  // const res = await fetch('http://localhost:3333/books'):
-  const res = await fetch('https://api.nytimes.com/svc/books/v3/lists/current/hardcover-fiction.json?api-key=AqaEWGystNSOFqdTaHhoxJdsdRa53oYm')
+  const res = await fetch(`https://api.nytimes.com/svc/books/v3/lists/current/hardcover-fiction.json?api-key=
+  ${process.env.NEXT_APP_BOOKFINDER_API_KEY}`)
   const data = await res.json()
 
   return {
