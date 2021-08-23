@@ -1,0 +1,68 @@
+.livros {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    list-style: none;
+    gap: 15px 15px;
+    margin: 0 0 15px 15px;
+    .livro{
+        height: 400px;
+        max-width: 100%;
+        // background-color: #000;
+
+        img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: fill;
+        }
+        p{
+            position: relative;
+            top: -50%;
+            display: none;
+        }
+
+    }
+
+    
+
+    .livro:hover{
+        cursor: pointer;
+        img{
+            opacity: 0.2;
+        }
+
+        p {
+            display: block;
+            font-size: 1.5rem;
+            color: white;
+        }
+    }
+
+
+}
+
+.emptyBooks{
+    margin-top: 400px;
+    font-size: 2rem;
+}
+
+@media (max-width: 1310px)and (min-width: 902px){
+    .livros {
+        grid-template-columns: repeat(4,1fr);
+    }
+}
+
+@media (max-width: 901px) and (min-width: 375px){
+    .livros {
+        grid-template-columns: repeat(2,1fr);
+        
+    }
+}
+
+@media(max-width: 374px){
+    .livros{
+        grid-template-columns: repeat(2,1fr);
+        .livro{
+            height: 250px;
+        }
+    }
+}

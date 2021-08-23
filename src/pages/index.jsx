@@ -3,7 +3,6 @@ import Image from 'next/image'
 import Search  from '../components/Search'
 import styles from '../../styles/Home.module.css'
 const Home = (props) => {
-  // console.log()
   return (
     <div >
       <Head>
@@ -11,8 +10,8 @@ const Home = (props) => {
       </Head>
       
       <div className={styles.container}>
+        <h1>Livros</h1>
         <Search books={props.results.results} />
-
       </div>   
     </div>
   )
