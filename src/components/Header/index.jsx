@@ -10,7 +10,7 @@ export default function Header(){
     }
     return (
         <div className={styles.headerContainer}>
-            <h1>Bookfinder</h1>
+            <h1 className={styles.logo}>Bookfinder</h1>
             <form className={styles.formSearch} onSubmit={prevent}>
                     <input type="text" placeholder="Pesquise o Livro" value={search} className={styles.searchBook} onChange={onChange}/>
                     <button 

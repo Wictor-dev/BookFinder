@@ -26,3 +26,12 @@
     width: 25%;
 }
 
+@media (max-width: 374px){
+    .logo {
+        display: none;
+    }
+    .searchBook{
+        width: 75%;
+    }
+}
+
