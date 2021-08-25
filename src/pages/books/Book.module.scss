@@ -1,0 +1,26 @@
+.bookContainer {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: 1fr 2.5fr;
+    color: #fff;
+    .image{
+        padding-left: 50px;
+    }
+
+    .description{
+        display: grid;
+        padding-right: 50px;
+        font-size: 2rem;
+        
+        justify-content: space-evenly;
+        // h1,h2,p{
+        //     margin-bottom: 50px;
+        // }
+
+        a {
+            text-decoration: none;
+            color: rgb(251, 217, 217);
+            justify-self: flex-end;
+        }
+    }
+}
