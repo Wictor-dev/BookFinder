@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import { HeaderContext } from '../../context/HeaderContext'
 import Link from 'next/link'
-import styles from './Header.module.css'
+import styles from './Header.module.scss'
 
 export default function Header(){
     const {search, onChange, setLivro} = useContext(HeaderContext)
@@ -13,7 +13,6 @@ export default function Header(){
             <Link href='/'>
                 <a className={styles.logo}> BookFinder</a>
             </Link>
-            {/* <h1 className={styles.logo}>Bookfinder</h1> */}
             <form className={styles.formSearch} onSubmit={prevent}>
                     <input type="text" placeholder="Pesquise o Livro" value={search} className={styles.searchBook} onChange={onChange}/>
                     <button 

@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import Search  from '../components/Search'
-import styles from '../../styles/Home.module.css'
+import styles from '../styles/Home.module.scss'
 import {api} from '../services/api'
 const Home = (props) => {
   return (

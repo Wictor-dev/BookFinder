@@ -12,15 +12,20 @@ export default function Search(props){
             const {title, book_image, rank} = filteredBook
             return (
                 <li keys={title} className={styles.livro}>
-                    <Image 
-                        width={300} 
-                        height={400} 
-                        src={book_image} 
-                        alt={title} 
-                        objectFit='contain'/>
-                    <Link href={`/books/${rank}`}>
-                        <a><p>{title}</p></a>
-                    </Link>
+                    <div>
+                        <Image 
+                            width={300} 
+                            height={400} 
+                            src={book_image} 
+                            alt={title} 
+                            objectFit='contain'
+                            className={styles.img}
+                            />
+                        <Link href={`/books/${rank}`}>
+                            <a><p>{title}</p></a>
+                        </Link>
+
+                    </div>
                 </li>
             )
         }) : ''
