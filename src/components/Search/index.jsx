@@ -3,11 +3,11 @@ import styles from './Search.module.scss'
 import {HeaderContext} from '../../context/HeaderContext'
 import Image from 'next/image'
 import Link from 'next/link'
+
 export default function Search(props){
-    // console.log(props.books.books)
     const {livro} = useContext(HeaderContext)
     
-    const booksList = (livro!='') ? props.books.books.filter(book => book.title.includes(livro))
+    const booksList = (livro!='') ? props.books.filter(book => book.title.includes(livro))
         .map(filteredBook => {
             const {title, book_image, rank} = filteredBook
             return (
@@ -40,6 +40,7 @@ export default function Search(props){
             ):
             <ul className={styles.livros} >{booksList}</ul>
             }
+
         </div>
     )
 }

@@ -8,10 +8,11 @@ export default function Header(){
     const prevent = (e) => {
         e.preventDefault();
     }
+
     return (
         <div className={styles.headerContainer}>
             <Link href='/'>
-                <a className={styles.logo}> BookFinder</a>
+            <a className={styles.logo}><h1>BookFinder</h1></a>
             </Link>
             <form className={styles.formSearch} onSubmit={prevent}>
                     <input type="text" placeholder="Pesquise o Livro" value={search} className={styles.searchBook} onChange={onChange}/>
@@ -25,3 +26,6 @@ export default function Header(){
         </div>
     )
 }
+
+
+

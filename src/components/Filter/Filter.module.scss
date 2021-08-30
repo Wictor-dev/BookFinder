@@ -1,0 +1,19 @@
+.filterContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 10px;
+    background-color: #0f0f0f;
+    form{
+        width: 30%;
+    }
+    select{
+        width: 100%;
+        border: 1px solid #0f0f0f;
+    }
+
+    input, select{
+        margin: 5px;
+    }
+
+}

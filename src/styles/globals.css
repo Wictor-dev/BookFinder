@@ -2,7 +2,7 @@
     padding: 0;
     margin: 0;
 }
-body, button,input {
+body, button,input, select {
   font: 400 1rem 'Inter', sans-serif;
 }
 h1{
@@ -12,6 +12,6 @@ body {
   background-color: #363636;
 }
 
-button{
+button, select{
   cursor: pointer;
 }

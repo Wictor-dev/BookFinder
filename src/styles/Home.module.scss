@@ -4,8 +4,26 @@
   text-align: center;
   overflow-y: scroll;
   color: #E8E8E8;
+  display: grid;
 
-  h1{
-    // font: 500 1rem 'Lexend', sans-serif;
+  grid-template-rows: 1fr 4fr;
+  grid-template-columns: 1fr;
+  
+  
+}
+
+.container::-webkit-scrollbar {
+  width: 12px;               /* width of the entire scrollbar */
+}
+
+.container::-webkit-scrollbar-track {
+  background: #2a2a2a;        /* color of the tracking area */
+}
+
+
+@media (max-width: 901px) and (min-width: 375px){
+  .container{
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 4fr; 
   }
 }
