@@ -1,9 +1,12 @@
-import { api } from "../../services/api"
+import { api } from "../../../services/api"
 import styles from './Book.module.scss'
 import Image from 'next/image'
 import Head from 'next/head'
+import { useContext, useState } from "react"
+import {FilterContext} from '../../../context/FilterContext'
 export default function Book({book}){
     const {title, book_image, description, author, contributor, buy_links} = book
+    
     return (
         <div>
             <Head>
@@ -39,9 +42,9 @@ export const getStaticPaths = async () => {
     }
 }
 export const getStaticProps = async (ctx) => {
-    const { slug } = ctx.params
+    const { dinamic, slug } = ctx.params
 
-    const {data} = await api.get(`/current/hardcover-fiction.json?api-key=
+    const {data} = await api.get(`/current/${dinamic}.json?api-key=
     ${process.env.NEXT_APP_BOOKFINDER_API_KEY}`)
     const books = data.results.books
     const rank = slug
