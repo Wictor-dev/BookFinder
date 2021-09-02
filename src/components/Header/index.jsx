@@ -8,7 +8,6 @@ export default function Header(){
     const prevent = (e) => {
         e.preventDefault();
     }
-    console.log(search.toUpperCase())
     return (
         <div className={styles.headerContainer}>
             <Link href='/'>

@@ -5,17 +5,27 @@ import {api} from '../services/api'
 import Filter from '../components/Filter'
 import { useContext, useEffect, useState } from 'react'
 import { FilterContext } from '../context/FilterContext'
+import {DateContext} from '../context/DateContext'
 const Home = (props) => {
   const {filter} = useContext(FilterContext)
-  const [books, setBooks] = useState([])
+  const {date, setDate} = useContext(DateContext)
 
+  const [books, setBooks] = useState([])
   useEffect(()=>{
-    fetch(`https://api.nytimes.com/svc/books/v3/lists/current/${filter}.json?api-key=AqaEWGystNSOFqdTaHhoxJdsdRa53oYm`)
-        .then(response => response.json())
-        .then(data=>setBooks(data.results.books))
-  }, [filter])
- 
+    fetch(`https://api.nytimes.com/svc/books/v3/lists/${date}/${filter}.json?api-key=AqaEWGystNSOFqdTaHhoxJdsdRa53oYm`)
+      .then(response => response.json())
+      .then(data=>setBooks(data.results.books))
+    // .then(response => console.log(response))
+        
+
+  }, [filter, date])
   
+  console.log(books)
+  if (books === undefined){
+    console.log('é indefinido')
+  }
+  
+
   
   return (
     

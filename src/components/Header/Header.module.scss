@@ -40,18 +40,21 @@
 }
 
 
-
+@media (max-width: 901px){
+    .formSearch{
+        // width: 80%;
+        margin-left: 20px;
+        .searchBook{
+            width: 75%;
+        }
+    }
+}
 
 
 @media (max-width: 600px){
     .logo {
         display: none;
     }
-    .formSearch{
-        width: 100%;
-        .searchBook{
-            width: 75%;
-        }
-    }
+    
 }
 
