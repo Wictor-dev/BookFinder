@@ -4,14 +4,14 @@ import {HeaderContext} from '../../context/HeaderContext'
 import {FilterContext} from '../../context/FilterContext'
 import Image from 'next/image'
 import Link from 'next/link'
-import { DateContext } from '../../context/DateContext'
+// import { DateContext } from '../../context/DateContext'
 
 export default function Search(props){
     const {livro} = useContext(HeaderContext)
     const {filter} = useContext(FilterContext)
-    const {date} = useContext(DateContext)
+    // const {date} = useContext(DateContext)
     
-    const booksList = (livro!='' && props.books !== undefined) ? props.books.filter(book => book.title.includes(livro))
+    const booksList = (livro!='') ? props.books.filter(book => book.title.includes(livro))
         .map(filteredBook => {
             const {title, book_image, rank} = filteredBook
             return (
@@ -25,7 +25,7 @@ export default function Search(props){
                             objectFit='contain'
                             className={styles.img}
                             />
-                        <Link href={`/books/${date}/${filter}/${rank}`}>
+                        <Link href={`/books/${filter}/${rank}`}>
                             <a><p>{title}</p></a>
                         </Link>
 
@@ -45,7 +45,7 @@ export default function Search(props){
                             objectFit='contain'
                             className={styles.img}
                             />
-                        <Link href={`/books/${date}/${filter}/${rank}`}>
+                        <Link href={`/books/${filter}/${rank}`}>
                             <a><p>{title}</p></a>
                         </Link>
 
